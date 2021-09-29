@@ -1,0 +1,128 @@
+body {
+    font-family: sans-serif;
+}
+
+#container {
+    width: 100%;
+    max-width: 1366px;
+    min-width: 800px;
+    margin: auto;
+}
+
+#banner {
+    width: 1100px;
+    height: 250px;
+    margin: 50px;
+    font-family: din-condensed, sans-serif;
+    font-size: 60px;
+    text-align: center;
+    animation: unflip 500ms;
+}
+
+.a1 {
+    width: 50px;
+    height: 50px;
+    margin: 4px;
+    background-color: black;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+}
+
+#banner:hover .a1 {
+    animation-name: flip;
+    animation-duration: 500ms;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+@keyframes flip {
+    0% {
+        animation-timing-function: ease-in;
+        transform: rotateX(0deg);
+    }
+    25% {
+        animation-timing-function: linear;
+        transform: rotateX(90deg);
+        background-color: black;
+    }
+    26% {
+        background-color: blue;
+    }
+    50% {
+        animation-timing-function: ease-out;
+        transform: rotateX(180deg);
+    }
+    75% {
+        animation-timing-function: linear;
+        transform: rotateX(270deg);
+        background-color: blue;
+    }
+    76% {
+        background-color: black;
+    }
+    100% {
+        animation-timing-function: ease-out;
+        transform: rotateX(360deg);
+        background-color: black;
+    }
+}
+
+@keyframes unflip {
+    0% {
+        animation-timing-function: ease-in;
+        transform: rotateX(0deg);
+    }
+    25% {
+        animation-timing-function: linear;
+        transform: rotateX(90deg);
+        background-color: black;
+    }
+    26% {
+        background-color: blue;
+    }
+    50% {
+        animation-timing-function: ease-out;
+        transform: rotateX(180deg);
+    }
+    75% {
+        animation-timing-function: linear;
+        transform: rotateX(270deg);
+        background-color: blue;
+    }
+    76% {
+        background-color: black;
+    }
+    100% {
+        animation-timing-function: ease-out;
+        transform: rotateX(360deg);
+        background-color: black;
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    padding: 20px;
+    max-width: 1100px;
+}
+
+section {
+    width: 33%;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul li {
+    padding: 20px;
+}
