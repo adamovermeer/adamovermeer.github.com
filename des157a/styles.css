@@ -17,7 +17,7 @@ body {
 #banner {
     width: 1100px;
     height: 250px;
-    margin: 50px;
+    margin: 50px auto;
     background-color: #0E0F11;
     font-family: din-condensed, sans-serif;
     font-size: 80px;
@@ -211,6 +211,8 @@ main {
     display: flex;
     padding: 20px;
     max-width: 1100px;
+    margin: auto;
+    justify-content: center;
 }
 
 section {
@@ -218,6 +220,27 @@ section {
     border: 1px solid black;
     margin: 10px;
     padding: 10px;
+    color: #0E0F11;
+}
+
+a {
+    color: #0E0F11;
+    text-decoration: none;
+    display: block;
+    padding: 7px 10px;
+    height: 100%;
+}
+
+main ul li {
+    background-color: #D6DEE6;
+}
+
+main ul li:nth-child(even) {
+    background-color: #C4CBD2;
+}
+
+main ul li:hover {
+    background-color: #7FAEDE;
 }
 
 footer ul {
@@ -228,4 +251,12 @@ footer ul {
 
 footer ul li {
     padding: 20px;
+}
+
+footer ul li a {
+    color: #0E0F11;
+}
+
+footer ul li a:hover {
+    color: #6C7B8A;
 }
