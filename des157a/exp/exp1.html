@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 1</title>
+</head>
+<body>
+    <h1>Experiment 1</h1>
+    <h2>Open the console to view the experiment run!</h2>
+    
+    <script>
+        //this code will replicate the cycling of a split-flap display
+        //for each letter in your word, it will cycle from A to 0 until it reaches the correct letter
+
+        var text = prompt("Input a word to display", "");
+        var sequence = [" ", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+        var progress = [];
+        var output = "";
+
+        text = text.toUpperCase();
+
+        for (var i = 0; i < text.length; i++) {
+            progress.splice(i, 0, "0");
+        }
+
+        while (text != output) {
+            output = "";
+            for (var i = 0; i < text.length; i++) {
+                if (text[i] != sequence[progress[i]] && progress[i] < sequence.length) {
+                    output += sequence[progress[i]];
+                    progress[i]++;
+                } else if (progress[i] > sequence.length) {
+                        console.log("invalid input detected");
+                        //notes invalid inputs, but currently I do not have a good way to remove them
+                } else {
+                    output += sequence[progress[i]];
+                }
+            }
+            console.log(output);
+        }
+    </script>
+</body>
+</html>
