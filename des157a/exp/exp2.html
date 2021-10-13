@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+</head>
+<body>
+    <h1>Experiment 2</h1>
+    <h2>Watch below to see the program run!</h2>
+
+    <div style="font-family: 'Courier New', Courier, monospace;"></div>
+    
+    <script>
+        //this code takes an input, and cycles through each character like a split-flap display until it reaches the final text
+
+        var input = prompt("Input a word to display", "");
+        var sfLength = 18;
+        var sequence = [" ", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+        var progress = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+        var output = "";
+        var sfLine;
+        var sfLineOutput;
+
+
+
+        function sfConvert(textToConvert) {
+            var convertedText;
+            textToConvert = textToConvert.toUpperCase();
+            if(textToConvert.length > 18) {
+                convertedText = textToConvert.slice(0,sfLength);
+                console.log(`text input was too long, and has been trimmed to ${sfLength} characters.`);
+            } else {
+                convertedText = textToConvert;
+            }
+            return convertedText;
+        }
+
+        function sfUpdate(text) {
+            text = sfConvert(text);
+            while (text != output) {
+                sfSingleUpdate(text);
+            }
+        }
+
+        function sfSingleUpdate(text) {
+            output = "";
+                for (var i = 0; i < text.length; i++) {
+                    if (text[i] != sequence[progress[i]]) {
+                        output += sequence[progress[i]];
+                        progress[i]++;
+                    } else {
+                        output += sequence[progress[i]];
+                    }
+                }
+                sfLine = document.createElement('p');
+                sfLineOutput = document.createTextNode(output);
+                sfLine.appendChild(sfLineOutput);
+                document.querySelector('div').appendChild(sfLine);
+        }
+
+        sfUpdate(input);
+      
+    </script>
+</body>
+</html>
