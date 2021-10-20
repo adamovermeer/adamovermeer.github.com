@@ -1,15 +1,26 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     max-width: 1000px;
     padding: 100px;
     margin: auto;
-    font-family: sans-serif;
+    font-family: freight-text-pro, serif;
+    font-weight: 400;
+    font-style: normal;
     color: #000914;
 }
 
-section {
+main {
     width: 50%;
     margin-left: 50%;
-    margin-top: 50px;
+    margin-top: -100px;
+}
+
+article {
+    margin-top: -50px;
+    padding-top: 50px;
 }
 
 p {
@@ -18,12 +29,12 @@ p {
     margin-bottom: 30px;
 }
 
-section a, footer a {
+main a, footer a {
     text-decoration: none;
     color: #2c60a3;
 }
 
-section a:hover, footer a:hover{
+main a:hover, footer a:hover{
     color: #006cfa;
     background-color: #e6ecf5;
     padding: 4px;
@@ -38,44 +49,78 @@ ul {
 
 nav {
     position: fixed;
-    top: 140px;
+    top: 80px;
 }
 
 nav ul li {
     display: block;
     font-size: 24px;
+    padding-left: 15px;
     border-bottom: 3px solid #000914;
     width: 300px;
+    height: 50px;
+    transition: all 200ms;
 }
 
 nav ul li:first-of-type {
     border-top: 3px solid #000914;
 }
 
+nav ul li:hover {
+    background-color: #e6ecf5;
+}
+
+.active {
+    background-color: #f3ff08;
+}
+
+.active:hover {
+    background-color: #ffee00;
+}
+
 nav a {
-    padding: 14px 0;
+    padding: 9px 0;
     color: #000914;
     text-decoration: none;
     display: block;
     height: 100%;
 }
 
-nav ul li:hover {
-    color: #000914;
-    background-color: #e6ecf5;
+nav, h1 {
+    font-family: fieldwork, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+} 
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h2, footer {
+    font-family: fieldwork, sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 img {
-    height: 24px;
+    padding: 2px;
+    height: 24px;  
+    transition: all 200ms;
     position: absolute;
-    right: 0;
+    right: 15px;
 }
 
 footer {
     position: fixed;
-    top: 750px;
+    bottom: 80px;
 }
 
-footer li {
-    margin-bottom: 10px;
+footer a {
+    display: block;
+    font-size: 16px;
+    line-height: 28px;
 }
