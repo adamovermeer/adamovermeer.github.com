@@ -20,7 +20,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-form, #madlib {
+form, article {
     flex-direction: column;
     max-width: 500px;
     margin: auto;
@@ -49,15 +49,13 @@ input:focus {
 }
 
 .tag {
-    position: absolute;
-    bottom: 150px;
-    left: 50%;
-    transform: translate(-50%);
+    text-align: center;
+    margin-top: 10px;
 }
 
 button {
-    position: absolute;
-    bottom: 200px;
+    margin-top: 40px;
+    position: relative;
     left: 50%;
     height: 55px;
     width: 55px;
