@@ -24,7 +24,7 @@
         };
 
         madlib.innerHTML = `<p>It is nice to meet you, <span>${words[0]}</span>. So, you want <span>${words[1]}</span>? That sounds like a good goal to have. Yet, you feel that <span>${words[2]}</span> stands in your way?</p>
-        <p>It may be hard to accept, but in the garden, nothing happens without reason. We endure the winter because we know the spring will come. You must find practices to control your <span>${words[2]}</span>, and when you do, you will find those same practices will help you <span>${words[1]}</span>. There will be times that the <span>${words[2]}</span> may feel overwhelming. Yet, it is only after old leaves fall that new ones may grow.</p>
+        <p>It may be hard to accept, but in the garden, nothing happens without reason. We endure the winter because we know the spring will come. You must find practices to control <span>${words[2]}</span>, and when you do, you will find those same practices will help you <span>${words[1]}</span>. There will be times that the <span>${words[2]}</span> may feel overwhelming. Yet, it is only after old leaves fall that new ones may grow.</p>
         <p>You know that you have incredible <span>${words[3]}</span>. Use it. If you must lie dormant for a while, remember that like us, you are not failing—you are simply waiting for spring.</p>`;
 
         myForm.className = 'hidden';

@@ -50,14 +50,14 @@ input:focus {
 
 .tag {
     position: absolute;
-    top: 715px;
+    bottom: 150px;
     left: 50%;
     transform: translate(-50%);
 }
 
 button {
     position: absolute;
-    top: 670px;
+    bottom: 200px;
     left: 50%;
     height: 55px;
     width: 55px;
