@@ -66,6 +66,10 @@ button {
     z-index: 1;
 }
 
+button img {
+    width: 30px;
+}
+
 button:hover, button:focus {
     background-color: #b3b58d;
     border: 3px solid #999c6b;
