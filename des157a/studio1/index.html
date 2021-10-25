@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rnz2ctj.css">
+    <script src="script.js" defer></script>
+    <title>Wisdom from the Plants</title>
+</head>
+<body>
+    <header>
+        <h1>Wisdom from the Plants</h1>
+    </header>
+    <main>
+        <form class="showing">
+            <label for="noun1">Welcome to the garden. What shall we call you?</label>
+            <input type="text" id="noun1" required>
+
+            <label for="noun2">What is the thing you want help to achieve?</label>
+            <input type="text" id="noun2" required>
+
+            <label for="adj1">And what is the thing that stands in your way?</label>
+            <input type="text" id="adj1" required>
+
+            <label for="verb1">Finally, what do you consider to be your greatest strength?</label>
+            <input type="text" id="verb1" required>
+
+            <p class="tag">Submit</p>
+            <button type="submit"><img src="/images/submit.svg" width="30px" alt="submit icon"></button>
+        </form>
+
+        <article class="hidden">
+            <div id="madlib"></div>
+            <p class="tag">Reset</p>
+            <button id="reset"><img src="/images/reset.svg" width="30px" alt="reset icon"></button>
+            
+        </article>
+        
+    </main>
+    <footer>
+        <a href="https://validator.w3.org/check?uri=https://adamovermeer.github.io/des157a/studio1">Validate HTML</a>
+    </footer>
+</body>
+</html>
