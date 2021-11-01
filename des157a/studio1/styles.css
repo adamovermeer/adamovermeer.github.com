@@ -88,13 +88,17 @@ div {
     z-index: -1;
 }
 
-footer a {
+footer {
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translate(-50%);
+}
+
+footer a {
     color: #102b47;
     text-decoration: none;
+    padding: 0 20px;
 }
 
 footer a:hover {
