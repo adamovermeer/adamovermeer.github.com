@@ -33,7 +33,6 @@
     function resetWindow() {
         carousel.scrollLeft = 0;
         imgWidth = document.querySelector('#carousel img').clientWidth;
-        console.log('resized!');
     };
 
     //checks for alignment to snap to after scroll
@@ -84,6 +83,11 @@
     window.addEventListener('resize', function(){
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(resetWindow, 500);
+    });
+
+    window.addEventListener('load', function(){
+        //reset window on load
+        resetWindow();
     });
 
     //initiate first scroll prompt
