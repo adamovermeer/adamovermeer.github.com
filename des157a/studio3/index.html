@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of PIG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/xok0nyb.css">
+	<link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <button id="settings">?</button>
+    <div id="overlay">
+        <h1>Game of PIG</h1>
+        <p>There are two players. The player whose turn it is draws two numbered cards. The total of the cards is added to the current player's score, unless either card comes up as a "one". If this happens, this player's turn is over, and it is the other player’s turn. After each draw, the current player can either draw again, (assuming a "one" was not rolled) or if the current player feels that luck is running thin, they can pass to the other player. The first player to get 30 points or higher wins.</p> 
+        <p>Oh, and if you draw two "ones" (snake eyes), your current score gets zeroed out. So don’t do that.</p>
+        <button id="reset">Start game</button>
+    </div>
+
+    <div id="game">
+        <div id="cards">
+            <div class="discard">
+                <div class="card1"></div>
+                <div class="card2"></div>
+            </div>
+            <div class="hand">
+                <div class="card1"><h2>?</h2></div>
+                <div class="card2"><h2>?</h2></div>
+            </div>
+            <div class="deck">
+                <div class="card1"></div>
+                <div class="card2"></div>
+            </div>
+        </div>
+        <div id="information"></div>
+        <div id="gameui">
+            <div id="p1score">
+                <img src="images/indicator.svg" alt="current player indicator">
+                <h4>P1</h4>
+                <h3>0</h3>
+            </div>
+            <div id="controls">
+            </div>
+            <div id="p2score">
+                <img src="images/indicator.svg" alt="current player indicator">
+                <h4>P2</h4>
+                <h3>0</h3>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <ul>
+            <li><a href="https://validator.w3.org/check?uri=https://adamovermeer.github.io/des157a">Valid HTML 5</a></li>
+            <li><a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a></li>
+            <li><a href="mailto:&#097;&#100;&#097;&#109;&#046;&#111;&#118;&#101;&#114;&#109;&#101;&#101;&#114;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">Email Me</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
