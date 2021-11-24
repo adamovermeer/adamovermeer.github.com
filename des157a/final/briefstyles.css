@@ -1,0 +1,37 @@
+main, footer {
+    width: 50vw;
+    margin: 0 auto;
+    font-family: 'Barlow', sans-serif;
+}
+
+img {
+    width: 100%;
+    border: 1px solid black;
+    
+}
+
+figure {
+    margin: 0;
+}
+
+p, h1, h2, ul {
+    width: 30vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2 {
+    font-weight: 600;
+    font-style: italic;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+li {
+    padding: 5vh 1em 0;
+}
