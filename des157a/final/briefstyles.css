@@ -35,3 +35,10 @@ ul {
 li {
     padding: 5vh 1em 0;
 }
+
+#testers figure {
+    padding: 1em 0;
+    width: 30vw;
+    margin: auto;
+}
+
