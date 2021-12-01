@@ -149,7 +149,7 @@ strong {
 
 .bird {
     position: absolute;
-    background-image: url(/images/bird.gif);
+    background-image: url(https://adamovermeer.github.io/des157a/final/finalproject/images/bird.gif);
     background-size: contain;
     background-repeat: no-repeat;
     animation-name: fly;

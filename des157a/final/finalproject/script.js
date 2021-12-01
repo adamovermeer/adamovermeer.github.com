@@ -251,7 +251,7 @@
             sections[counter].classList.add('selected');
 
             // initialize slideshow
-            slideTimer = setTimeout(slideshow, 1000);
+            slideTimer = setTimeout(slideshow, 2000);
         }, 9000);
 
         // start making random birds
