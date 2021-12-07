@@ -20,6 +20,7 @@
     let relocate;
     let counter = 0;
     let prevPageX;
+    let prevPageY;
 
     // initialize the timers
     let scrollTimer;
@@ -189,16 +190,18 @@
         // zero page scroll on first touch
         window.addEventListener('touchstart', function(e){
             prevPageX = e.touches[0].pageX;
+            prevPageY = e.touches[0].pageY;
         })
 
         // scroll carousel on mobile scroll
         window.addEventListener('touchmove', function(e){
 
             // scroll carousel
-            carousel.scrollLeft += prevPageX - e.touches[0].pageX;
+            carousel.scrollLeft += 2 * (prevPageX - e.touches[0].pageX + prevPageY - e.touches[0].pageY);
 
             //reset prevPageX
             prevPageX = e.touches[0].pageX;
+            prevPageY = e.touches[0].pageY;
 
             // reset timers
             clearTimeout(scrollTimer);
