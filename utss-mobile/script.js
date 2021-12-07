@@ -19,6 +19,7 @@
     let containerMiddle;
     let relocate;
     let counter = 0;
+    let prevPageX;
 
     // initialize the timers
     let scrollTimer;
@@ -81,6 +82,8 @@
         function nextSlide(){
             counter++;
 
+            console.log('next!');
+
             // check which images to cycle
             if(counter > articles.length - 1){
                 // reset counter at the end of the images
@@ -101,6 +104,8 @@
         // moves carousel to previous image
         function lastSlide(){
             counter--;
+
+            console.log('prev!');
 
             // check which images to cycle
             if(counter < 0){
@@ -135,6 +140,8 @@
             // calculate which image is closest to center
             const difference = carousel.scrollLeft - imgWidth;
 
+            console.log(difference);
+
             if(difference < 0){
                 carousel.scrollBy({
                     left: -difference,
@@ -161,13 +168,14 @@
     
         // scroll carousel on mouse wheel
         window.addEventListener('wheel', function(e){
+
             // scroll carousel
             carousel.scrollLeft += e.deltaY;
 
-            //reset timers
+            // reset timers
             clearTimeout(scrollTimer);
             clearTimeout(slideTimer);
-            scrollTimer = setTimeout(snapTo, 500);
+            // scrollTimer = setTimeout(snapTo, 500);
     
             // check if the active image has changed
             if(carousel.scrollLeft > imgCenter){
@@ -178,13 +186,24 @@
             }
         });
 
-        // scroll carousel on mobile scroll
-        window.addEventListener('touchmove', function(){
+        // zero page scroll on first touch
+        window.addEventListener('touchstart', function(e){
+            prevPageX = e.touches[0].pageX;
+        })
 
-            //reset timers
+        // scroll carousel on mobile scroll
+        window.addEventListener('touchmove', function(e){
+
+            // scroll carousel
+            carousel.scrollLeft += prevPageX - e.touches[0].pageX;
+
+            //reset prevPageX
+            prevPageX = e.touches[0].pageX;
+
+            // reset timers
             clearTimeout(scrollTimer);
             clearTimeout(slideTimer);
-            scrollTimer = setTimeout(snapTo, 500);
+            // scrollTimer = setTimeout(snapTo, 500);
     
             // check if the active image has changed
             if(carousel.scrollLeft > imgCenter){

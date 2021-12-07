@@ -79,7 +79,7 @@ li a:hover .icon {
 }
 
 #carousel {
-    overflow: scroll;
+    overflow: hidden;
     display: flex;
 }
 
