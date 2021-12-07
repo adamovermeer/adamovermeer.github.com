@@ -178,6 +178,23 @@
             }
         });
 
+        // scroll carousel on mobile scroll
+        window.addEventListener('scroll', function(){
+
+            //reset timers
+            clearTimeout(scrollTimer);
+            clearTimeout(slideTimer);
+            scrollTimer = setTimeout(snapTo, 500);
+    
+            // check if the active image has changed
+            if(carousel.scrollLeft > imgCenter){
+                nextSlide();
+            }else if(carousel.scrollLeft < imgCenter - imgWidth){
+                lastSlide();
+                carousel.scrollLeft = imgWidth / 2 + imgWidth;
+            }
+        });
+
         // change slide on arrows, spacebar
         document.addEventListener('keydown', function(e){
             clearTimeout(slideTimer);
