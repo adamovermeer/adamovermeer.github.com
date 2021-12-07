@@ -179,7 +179,7 @@
         });
 
         // scroll carousel on mobile scroll
-        window.addEventListener('scroll', function(){
+        window.addEventListener('touchmove', function(){
 
             //reset timers
             clearTimeout(scrollTimer);
