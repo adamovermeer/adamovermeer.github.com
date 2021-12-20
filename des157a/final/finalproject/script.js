@@ -205,6 +205,7 @@
         context.addEventListener('mouseover', function(){
             clearTimeout(overlayTimer);
             overlay.classList.remove('hidden');
+            
         })
 
         // hide info menu
@@ -249,10 +250,10 @@
 
             // select first section
             sections[counter].classList.add('selected');
-
-            // initialize slideshow
-            slideTimer = setTimeout(slideshow, 2000);
         }, 9000);
+
+        // initialize slideshow
+        slideTimer = setTimeout(slideshow, 10000);
 
         // start making random birds
         setTimeout(randomBird, Math.random() * 20000 + 2000);
