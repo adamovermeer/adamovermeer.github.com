@@ -1,0 +1,160 @@
+body {
+    background-color: #fff5fe;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    background-image: url(/images/aobg.png), url(/images/grain.png);
+    background-size: 30vw, 5vw;
+    background-repeat: repeat-x, repeat;
+    z-index: -1;
+}
+
+main, nav div a {
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+nav {
+    margin: 10vh auto 0;
+    padding-bottom: 0.5em;
+    width: 60vw;
+    display: flex;
+    font-size: 1.25em;
+    justify-content: space-between;
+    border-bottom: 1.5px solid black;
+}
+
+span {
+    font-weight: 500;
+    padding-right: 0.25em;
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+a:hover span, section:hover span, #currentpage {
+    opacity: 1;
+}
+
+nav button {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+}
+
+#logo strong {
+    text-transform: uppercase;
+    padding-right: 0.5em;
+}
+
+nav li {
+    justify-content: right;
+    padding-left: 1em;
+}
+
+li:first-of-type {
+    justify-content: left;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.active {
+    opacity: 1;
+}
+
+.star {
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    animation-name: flicker;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    z-index: -1;
+}
+
+@keyframes flicker {
+    20%{
+        transform: scale(1.25);
+    }
+    50%{
+        transform: scale(1);
+    }
+    80%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0.5);
+    }
+}
+
+@media all and (max-width: 1024px) {
+    
+    body {
+        font-size: 0.75em;
+        background-size: 50vw, 5vw;
+    }
+
+    nav ul {
+        flex-direction: column;
+        border-bottom: 1.5px solid black;
+        overflow: hidden;
+        max-height: 0em;
+        transition: max-height 400ms;
+        margin-top: -1.5px;
+    }
+    
+    li {
+        padding: 0.25em;
+    }
+
+    li:first-of-type {
+        margin-top: 1em;
+    }
+
+    li:last-of-type {
+        margin-bottom: 1em;
+    }
+
+    .open {
+        max-height: 7em;
+    }
+
+    nav div {
+        padding-bottom: 0.5em;
+        width: 90vw;
+        border-bottom: 1.5px solid black;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav {
+        width: 90vw;
+        padding-bottom: 0;
+        border-bottom: none;
+        flex-direction: column;
+    }
+
+    nav button {
+        display: block;
+        border: none;
+        background-color: transparent;
+        background-image: url(/images/openmenu.svg);
+        background-repeat: no-repeat;
+        width: 1.25em;
+        margin-top: 0.25em;
+    }
+}

@@ -1,0 +1,73 @@
+body {
+    overflow: hidden;
+}
+
+#container {
+    margin: 2vh 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+#carousel {
+    overflow: hidden;
+    display: flex;
+}
+
+article img {
+    width: 60vw;
+    border: 1px solid transparent;
+}
+
+article a:hover section img {
+    margin-left: 0.75em;
+    border: 1px solid transparent;
+}
+
+article a:hover img {
+    border: 1px solid black;
+}
+
+article {
+    position: relative;
+    margin: 0 3vw;
+}
+
+section {
+    display: flex;
+    width: 60vw;
+    opacity: 0;
+    transition: opacity 300ms;
+    margin-top: -0.5em;
+}
+
+section img {
+    width: 1.25em;
+    border: none;
+    margin-left: 0.25em;
+    transition: margin-left 50ms;
+}
+
+section h2 {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+@media all and (max-width: 1024px) {
+
+    article img {
+        width: 76vw;
+    }
+
+    article {
+        margin: 0 2vw;
+    }
+
+    section img {
+        width: 1.25em;
+    }
+
+    section {
+        width: 90vw;
+        margin: -0.5em -7vw 0;
+    }
+}

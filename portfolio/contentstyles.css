@@ -1,0 +1,160 @@
+section {
+    width: 40vw;
+    margin: 3em auto;
+    font-size: 1.5em;
+}
+
+p, section li, section a {
+    font-family: 'Bitter', serif;
+    line-height: 1.5em;
+    margin-top: 0;
+}
+
+section a {
+    text-decoration: underline;
+}
+
+section span {
+    margin-left: -0.5em;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 1em;
+    padding-bottom: 0em;
+    margin-bottom: 0.75em;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 1.5em;
+}
+
+section img {
+    margin: 0 -10vw;
+    width: 60vw;
+}
+
+.slideshow {
+    width: 100vw;
+    display: flex;
+    margin-left: -30vw;
+    overflow: hidden;
+    margin-bottom: -2em;
+}
+
+.slideshow figure {
+    margin: 1em;
+}
+
+.slideshow figure:first-of-type {
+    margin-left: 20vw;
+}
+
+.slideshow figure:last-of-type {
+    margin-right: 20vw;
+}
+
+.slideshow img {
+    margin: 0;
+}
+
+figcaption {
+    font-size: 0.75em;
+    margin-top: 0.5em;
+    text-transform: uppercase;
+}
+
+.inline {
+    width: 30vw;
+    margin-left: 5vw;
+}
+
+.sample img {
+    width: 10vw;
+    margin: 3vw 5vw;
+}
+
+.sample {
+    margin: 2em 10vw;
+}
+
+#sky {
+    background-color: skyblue;
+    width: 20vw;
+    height: 20vw;
+}
+
+figure {
+    margin-left: 0;
+}
+
+footer h1 {
+    margin-bottom: 0.5em;
+}
+
+footer a {
+    font-family: 'Barlow', sans-serif;
+}
+
+footer nav {
+    border-top: 1.5px solid black;
+    padding-top: 0.25em;
+}
+
+#logo {
+    display: flex;
+}
+
+#logo img {
+    transform: rotate(180deg);
+    width: 1.25em;
+    margin-right: 0.25em;
+    margin-left: 0em;
+    transition: all 50ms;
+}
+
+#logo:hover img {
+    margin-right: 0.75em;
+    margin-left: -0.5em;
+}
+
+@media all and (max-width: 1024px) {
+    section {
+        width: 90vw;
+        font-size: 1.25em;
+        margin: 1.75em auto;
+    }
+
+    section img {
+        margin: 0;
+        width: 90vw;
+    }
+
+    .inline {
+        width: 60vw;
+        margin-left: 15vw;
+    }
+
+    .slideshow {
+        margin-left: -5vw;
+    }
+
+    .slideshow figure:first-of-type {
+        margin-left: 5vw;
+    }
+    
+    .slideshow figure:last-of-type {
+        margin-right: 5vw;
+    }
+
+    .sample, .sample figure div {
+        width: 90vw;
+        margin: auto;
+        text-align: center;
+    }
+
+    footer nav {
+        margin-top: 3em;
+    }
+}
